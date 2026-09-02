@@ -3,79 +3,702 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orange</title>
+
+  <title>Orange | Wellness, Lifestyle & Free Resources</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf4;
+      color: #35271f;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: rgba(255, 250, 244, 0.96);
+      border-bottom: 1px solid #eaded2;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #dc6900;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #35271f;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #dc6900;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 25px;
+      background:
+        radial-gradient(circle at top right, #ffd9aa, transparent 40%),
+        radial-gradient(circle at bottom left, #ffe9d2, transparent 45%),
+        #fffaf4;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #fff0de;
+      color: #c65d00;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 8vw, 85px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #e57200;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #66554a;
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #e57200;
+      color: white;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .button:hover {
+      background: #bf5d00;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: #e57200;
+      border: 2px solid #e57200;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #e57200;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      color: #6f5d51;
+      margin-bottom: 45px;
+      font-size: 18px;
+    }
+
+    /* BLOG */
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #efe2d7;
+      transition: 0.25s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(80, 50, 20, 0.09);
+    }
+
+    .post-image {
+      height: 190px;
+      background: #ffd8ae;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 65px;
+    }
+
+    .post-content {
+      padding: 25px;
+    }
+
+    .post-category {
+      color: #e57200;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .post-content h3 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .post-content p {
+      color: #6f5d51;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 18px;
+      color: #e57200;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* RESOURCES */
+
+    #resources {
+      background: #f7eee5;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .resource-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #eaded2;
+    }
+
+    .resource-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .resource-card h3 {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .resource-card p {
+      color: #6f5d51;
+      margin-bottom: 20px;
+    }
+
+    .download-button {
+      text-decoration: none;
+      color: #e57200;
+      font-weight: bold;
+    }
+
+    /* ABOUT */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-photo {
+      min-height: 450px;
+      background: #f6c995;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+    }
+
+    .about-text h2 {
+      font-family: Georgia, serif;
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      font-size: 18px;
+      color: #66554a;
+    }
+
+    /* NEWSLETTER / SOCIAL */
+
+    .connect {
+      text-align: center;
+      background: #e57200;
+      color: white;
+      border-radius: 30px;
+      padding: 60px 25px;
+    }
+
+    .connect h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .connect p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    .social-button {
+      display: inline-block;
+      color: #e57200;
+      background: white;
+      padding: 13px 24px;
+      margin: 6px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #7c685c;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-container {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      .posts-grid,
+      .resource-grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .section-title {
+        font-size: 35px;
+      }
+
+      .about-photo {
+        min-height: 300px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🍊 Orange</h1>
-    <p>A space for ideas, stories, and things worth sharing.</p>
-  </header>
-
-  <hr>
+  <!-- NAVIGATION -->
 
   <nav>
-    <a href="#home">Home</a> |
-    <a href="#blog">Blog</a> |
-    <a href="#resources">Free Resources</a> |
-    <a href="#about">About Me</a>
+    <div class="nav-container">
+
+      <a href="#home" class="logo">🍊 Orange</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#resources">Free Resources</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+    </div>
   </nav>
 
-  <hr>
 
-  <main>
+  <!-- HERO -->
 
-    <section id="home">
-      <h2>Welcome</h2>
+  <header class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        Wellness • Lifestyle • Real Life
+      </div>
+
+      <h1>
+        Welcome to <span>Orange.</span>
+      </h1>
 
       <p>
-        Welcome to Orange. This is my little corner of the internet
-        where I write about the things I'm passionate about,
-        share what I'm learning, and explore ideas that matter to me.
+        A space where wellness meets real life. I'm sharing what I'm
+        learning about nutrition, gut health, lifestyle, taking better
+        care of yourself, and everything in between.
       </p>
-    </section>
 
-    <section id="blog">
-      <h2>Latest Posts</h2>
+      <a href="#blog" class="button">Read the Blog</a>
 
-      <article>
-        <h3>My First Post</h3>
+      <a href="#resources" class="button button-outline">
+        Free Resources
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- BLOG -->
+
+  <section id="blog">
+
+    <div class="container">
+
+      <p class="section-label">From the blog</p>
+
+      <h2 class="section-title">
+        Things I'm thinking about lately
+      </h2>
+
+      <p class="section-intro">
+        Longer conversations about wellness, food, lifestyle,
+        things I'm learning, and topics that deserve more than
+        a 60-second video.
+      </p>
+
+
+      <div class="posts-grid">
+
+        <article class="post-card">
+
+          <div class="post-image">
+            🥑
+          </div>
+
+          <div class="post-content">
+
+            <span class="post-category">
+              Nutrition
+            </span>
+
+            <h3>
+              What I'm Learning About Gut Health
+            </h3>
+
+            <p>
+              Making nutrition information easier to understand
+              without making wellness feel overwhelming.
+            </p>
+
+            <a href="#" class="read-more">
+              Coming soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="post-card">
+
+          <div class="post-image">
+            🍽️
+          </div>
+
+          <div class="post-content">
+
+            <span class="post-category">
+              Food & Lifestyle
+            </span>
+
+            <h3>
+              Let's Talk About Real-Life Nutrition
+            </h3>
+
+            <p>
+              Food doesn't have to be perfect. Let's talk about
+              balance, habits, and eating in the real world.
+            </p>
+
+            <a href="#" class="read-more">
+              Coming soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="post-card">
+
+          <div class="post-image">
+            🌿
+          </div>
+
+          <div class="post-content">
+
+            <span class="post-category">
+              Wellness
+            </span>
+
+            <h3>
+              Small Things That Help Me Feel Better
+            </h3>
+
+            <p>
+              Simple ideas, routines, and things I'm discovering
+              while learning to take better care of myself.
+            </p>
+
+            <a href="#" class="read-more">
+              Coming soon →
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FREE RESOURCES -->
+
+  <section id="resources">
+
+    <div class="container">
+
+      <p class="section-label">Free for you</p>
+
+      <h2 class="section-title">
+        The Orange Library 📚
+      </h2>
+
+      <p class="section-intro">
+        Guides, checklists, PDFs, and other resources I've created
+        to make useful information easier to save and come back to.
+        Everything here is free.
+      </p>
+
+
+      <div class="resource-grid">
+
+        <div class="resource-card">
+
+          <div class="resource-icon">📄</div>
+
+          <h3>Wellness Guide</h3>
+
+          <p>
+            A simple downloadable guide with practical wellness
+            information you can keep.
+          </p>
+
+          <span class="download-button">
+            Coming soon
+          </span>
+
+        </div>
+
+
+        <div class="resource-card">
+
+          <div class="resource-icon">🥗</div>
+
+          <h3>Nutrition Notes</h3>
+
+          <p>
+            Easy-to-read nutrition notes and resources without
+            all the complicated language.
+          </p>
+
+          <span class="download-button">
+            Coming soon
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container about">
+
+      <div class="about-photo">
+        🍊
+      </div>
+
+
+      <div class="about-text">
+
+        <p class="section-label">
+          Behind Orange
+        </p>
+
+        <h2>
+          Hi, I'm the person behind Orange.
+        </h2>
 
         <p>
-          This is where my first story will go.
-          More coming soon!
+          I created Orange because sometimes the things I want to
+          talk about need more space than a short video.
         </p>
-      </article>
-    </section>
 
-    <section id="resources">
-      <h2>📚 Free Resources</h2>
+        <p>
+          This is where I share what I'm learning about wellness,
+          nutrition, gut health, lifestyle, and becoming a healthier,
+          happier version of yourself without pretending life is
+          perfect.
+        </p>
 
-      <p>
-        I'll share useful guides, PDFs, and other resources here.
-        Everything in this section is free to download.
-      </p>
+        <p>
+          Think of this website as the longer conversation —
+          somewhere we can slow down, learn something useful,
+          and talk about the things that actually matter.
+        </p>
 
-      <p>Free downloads coming soon!</p>
-    </section>
+      </div>
 
-    <section id="about">
-      <h2>About Me</h2>
+    </div>
 
-      <p>
-        Hi! I'm the person behind Orange.
-        I created this website to write, learn, create,
-        and share things that might help or inspire others.
-      </p>
-    </section>
+  </section>
 
-  </main>
 
-  <hr>
+  <!-- CONNECT -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="connect">
+
+        <h2>
+          Come hang out with me 🍊
+        </h2>
+
+        <p>
+          Follow along for videos, conversations, new posts,
+          and everything I'm learning along the way.
+        </p>
+
+        <!-- We'll add your real social links later -->
+
+        <a href="#" class="social-button">
+          TikTok
+        </a>
+
+        <a href="#" class="social-button">
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
 
   <footer>
-    <p>Made with ❤️ and curiosity.</p>
+
+    <p>
+      © 2026 Orange 🍊
+      <br>
+      Made with curiosity, care, and a lot of learning.
+    </p>
+
   </footer>
 
 </body>
