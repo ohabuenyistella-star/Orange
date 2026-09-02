@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Orange | Wellness, Lifestyle & Free Resources</title>
+  <title>Orange Flower | Lifestyle, Nutrition & Wellness</title>
 
   <style>
     * {
@@ -23,8 +23,6 @@
       color: #35271f;
       line-height: 1.6;
     }
-
-    /* NAVIGATION */
 
     nav {
       background: rgba(255, 250, 244, 0.96);
@@ -52,7 +50,7 @@
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 25px;
       list-style: none;
     }
 
@@ -65,8 +63,6 @@
     .nav-links a:hover {
       color: #dc6900;
     }
-
-    /* HERO */
 
     .hero {
       min-height: 78vh;
@@ -82,7 +78,7 @@
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .hero-tag {
@@ -97,7 +93,7 @@
 
     .hero h1 {
       font-family: Georgia, serif;
-      font-size: clamp(48px, 8vw, 85px);
+      font-size: clamp(48px, 8vw, 82px);
       line-height: 1;
       margin-bottom: 25px;
     }
@@ -109,7 +105,7 @@
     .hero p {
       font-size: 20px;
       color: #66554a;
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto 35px;
     }
 
@@ -133,8 +129,6 @@
       color: #e57200;
       border: 2px solid #e57200;
     }
-
-    /* GENERAL SECTIONS */
 
     section {
       padding: 90px 25px;
@@ -161,13 +155,11 @@
     }
 
     .section-intro {
-      max-width: 650px;
+      max-width: 700px;
       color: #6f5d51;
       margin-bottom: 45px;
       font-size: 18px;
     }
-
-    /* BLOG */
 
     .posts-grid {
       display: grid;
@@ -180,12 +172,6 @@
       border-radius: 20px;
       overflow: hidden;
       border: 1px solid #efe2d7;
-      transition: 0.25s;
-    }
-
-    .post-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(80, 50, 20, 0.09);
     }
 
     .post-image {
@@ -226,8 +212,6 @@
       text-decoration: none;
     }
 
-    /* RESOURCES */
-
     #resources {
       background: #f7eee5;
     }
@@ -245,29 +229,11 @@
       border: 1px solid #eaded2;
     }
 
-    .resource-icon {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
     .resource-card h3 {
       font-family: Georgia, serif;
       font-size: 25px;
       margin-bottom: 10px;
     }
-
-    .resource-card p {
-      color: #6f5d51;
-      margin-bottom: 20px;
-    }
-
-    .download-button {
-      text-decoration: none;
-      color: #e57200;
-      font-weight: bold;
-    }
-
-    /* ABOUT */
 
     .about {
       display: grid;
@@ -277,13 +243,13 @@
     }
 
     .about-photo {
-      min-height: 450px;
+      min-height: 440px;
       background: #f6c995;
       border-radius: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 100px;
+      font-size: 95px;
     }
 
     .about-text h2 {
@@ -298,7 +264,64 @@
       color: #66554a;
     }
 
-    /* NEWSLETTER / SOCIAL */
+    .student-section {
+      background: white;
+    }
+
+    .student-card {
+      background: #fff0de;
+      padding: 45px;
+      border-radius: 30px;
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .student-card h2 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .student-card p {
+      font-size: 18px;
+      color: #66554a;
+    }
+
+    .podcast {
+      background: #35271f;
+      color: white;
+    }
+
+    .podcast-card {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .podcast h2 {
+      font-family: Georgia, serif;
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .podcast p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #f3e8df;
+    }
+
+    .podcast-button {
+      display: inline-block;
+      background: #e57200;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 30px;
+      margin: 5px;
+      font-weight: bold;
+    }
 
     .connect {
       text-align: center;
@@ -315,7 +338,7 @@
     }
 
     .connect p {
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 25px;
       font-size: 18px;
     }
@@ -331,7 +354,20 @@
       font-weight: bold;
     }
 
-    /* FOOTER */
+    .disclaimer {
+      max-width: 900px;
+      margin: auto;
+      background: #f7eee5;
+      border-radius: 20px;
+      padding: 30px;
+      font-size: 14px;
+      color: #6f5d51;
+    }
+
+    .disclaimer h3 {
+      color: #35271f;
+      margin-bottom: 10px;
+    }
 
     footer {
       text-align: center;
@@ -339,32 +375,23 @@
       color: #7c685c;
     }
 
-    /* MOBILE */
-
     @media (max-width: 800px) {
-
       .nav-container {
         flex-direction: column;
         gap: 12px;
       }
 
       .nav-links {
-        gap: 15px;
-        font-size: 14px;
+        gap: 13px;
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .posts-grid,
       .resource-grid,
       .about {
         grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 70vh;
-      }
-
-      .hero p {
-        font-size: 18px;
       }
 
       .section-title {
@@ -380,42 +407,34 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <nav>
     <div class="nav-container">
-
-      <a href="#home" class="logo">🍊 Orange</a>
+      <a href="#home" class="logo">🍊 Orange Flower</a>
 
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#resources">Free Resources</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#podcast">Podcast</a></li>
       </ul>
-
     </div>
   </nav>
 
-
-  <!-- HERO -->
-
   <header class="hero" id="home">
-
     <div class="hero-content">
 
       <div class="hero-tag">
-        Wellness • Lifestyle • Real Life
+        Gen Z Lifestyle • Nutrition • Wellness
       </div>
 
       <h1>
-        Welcome to <span>Orange.</span>
+        Welcome to <span>Orange Flower.</span>
       </h1>
 
       <p>
-        A space where wellness meets real life. I'm sharing what I'm
-        learning about nutrition, gut health, lifestyle, taking better
-        care of yourself, and everything in between.
+        A space for Gen Z girls who love lifestyle, wellness,
+        nutrition, self-growth, and figuring life out one day at a time.
       </p>
 
       <a href="#blog" class="button">Read the Blog</a>
@@ -425,237 +444,219 @@
       </a>
 
     </div>
-
   </header>
 
-
-  <!-- BLOG -->
-
   <section id="blog">
-
     <div class="container">
 
       <p class="section-label">From the blog</p>
 
       <h2 class="section-title">
-        Things I'm thinking about lately
+        Lifestyle, nutrition & wellness
       </h2>
 
       <p class="section-intro">
         Longer conversations about wellness, food, lifestyle,
-        things I'm learning, and topics that deserve more than
-        a 60-second video.
+        navigating your 20s, and the things that deserve more
+        than a short social media post.
       </p>
-
 
       <div class="posts-grid">
 
         <article class="post-card">
-
-          <div class="post-image">
-            🥑
-          </div>
+          <div class="post-image">🥑</div>
 
           <div class="post-content">
+            <span class="post-category">Nutrition</span>
 
-            <span class="post-category">
-              Nutrition
-            </span>
-
-            <h3>
-              What I'm Learning About Gut Health
-            </h3>
+            <h3>Nutrition Without the Confusion</h3>
 
             <p>
-              Making nutrition information easier to understand
-              without making wellness feel overwhelming.
+              Simple conversations about food, nutrition,
+              and wellness without making healthy living feel overwhelming.
             </p>
 
-            <a href="#" class="read-more">
-              Coming soon →
-            </a>
-
+            <span class="read-more">Coming soon →</span>
           </div>
-
         </article>
 
-
         <article class="post-card">
-
-          <div class="post-image">
-            🍽️
-          </div>
+          <div class="post-image">🎀</div>
 
           <div class="post-content">
+            <span class="post-category">Gen Z Lifestyle</span>
 
-            <span class="post-category">
-              Food & Lifestyle
-            </span>
-
-            <h3>
-              Let's Talk About Real-Life Nutrition
-            </h3>
+            <h3>Life in Your 20s</h3>
 
             <p>
-              Food doesn't have to be perfect. Let's talk about
-              balance, habits, and eating in the real world.
+              Lifestyle tips, lessons, routines, and conversations
+              for Gen Z girls figuring out adulthood.
             </p>
 
-            <a href="#" class="read-more">
-              Coming soon →
-            </a>
-
+            <span class="read-more">Coming soon →</span>
           </div>
-
         </article>
 
-
         <article class="post-card">
-
-          <div class="post-image">
-            🌿
-          </div>
+          <div class="post-image">🌿</div>
 
           <div class="post-content">
+            <span class="post-category">Wellness</span>
 
-            <span class="post-category">
-              Wellness
-            </span>
-
-            <h3>
-              Small Things That Help Me Feel Better
-            </h3>
+            <h3>Wellness in Real Life</h3>
 
             <p>
-              Simple ideas, routines, and things I'm discovering
-              while learning to take better care of myself.
+              Realistic wellness habits and things I'm learning
+              about taking better care of ourselves.
             </p>
 
-            <a href="#" class="read-more">
-              Coming soon →
-            </a>
-
+            <span class="read-more">Coming soon →</span>
           </div>
-
         </article>
 
       </div>
+    </div>
+  </section>
+
+  <section class="student-section">
+
+    <div class="student-card">
+
+      <p class="section-label">A little about me</p>
+
+      <h2>MPH student + lifestyle creator 🎓</h2>
+
+      <p>
+        I'm currently an MPH student with a love for public health,
+        nutrition, wellness, and lifestyle content. When I'm not studying,
+        I enjoy sharing lifestyle tips for Gen Z girls and creating content
+        about navigating your 20s, taking care of yourself, and finding
+        balance in everyday life.
+      </p>
 
     </div>
 
   </section>
 
-
-  <!-- FREE RESOURCES -->
-
   <section id="resources">
-
     <div class="container">
 
       <p class="section-label">Free for you</p>
 
       <h2 class="section-title">
-        The Orange Library 📚
+        The Orange Flower Library 📚
       </h2>
 
       <p class="section-intro">
-        Guides, checklists, PDFs, and other resources I've created
-        to make useful information easier to save and come back to.
-        Everything here is free.
+        Free planners, calendars, PDFs, guides, and resources
+        designed to make college, wellness, and everyday life
+        a little easier.
       </p>
-
 
       <div class="resource-grid">
 
         <div class="resource-card">
-
-          <div class="resource-icon">📄</div>
-
-          <h3>Wellness Guide</h3>
+          <h3>🎓 College Student Calendar</h3>
 
           <p>
-            A simple downloadable guide with practical wellness
-            information you can keep.
+            A free calendar designed to help college students
+            organize classes, assignments, deadlines, and everyday life.
           </p>
 
-          <span class="download-button">
-            Coming soon
-          </span>
-
+          <strong style="color:#e57200;">
+            PDF coming next
+          </strong>
         </div>
 
-
         <div class="resource-card">
-
-          <div class="resource-icon">🥗</div>
-
-          <h3>Nutrition Notes</h3>
+          <h3>📄 More Free Resources</h3>
 
           <p>
-            Easy-to-read nutrition notes and resources without
-            all the complicated language.
+            More wellness, lifestyle, organization,
+            and student resources will be added here.
           </p>
 
-          <span class="download-button">
+          <strong style="color:#e57200;">
             Coming soon
-          </span>
-
+          </strong>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ABOUT -->
-
   <section id="about">
-
     <div class="container about">
 
       <div class="about-photo">
-        🍊
+        🌸
       </div>
-
 
       <div class="about-text">
 
         <p class="section-label">
-          Behind Orange
+          Behind Orange Flower
         </p>
 
         <h2>
-          Hi, I'm the person behind Orange.
+          Hi, welcome to my little corner of the internet.
         </h2>
 
         <p>
-          I created Orange because sometimes the things I want to
-          talk about need more space than a short video.
+          Orange Flower is an extension of the content I love creating
+          online — lifestyle, nutrition, wellness, and conversations
+          about navigating life as a Gen Z woman.
         </p>
 
         <p>
-          This is where I share what I'm learning about wellness,
-          nutrition, gut health, lifestyle, and becoming a healthier,
-          happier version of yourself without pretending life is
-          perfect.
+          I'm especially interested in public health and nutrition,
+          but I also love the everyday side of life: routines,
+          organization, self-growth, beauty, lifestyle,
+          and learning how to make our 20s feel a little less confusing.
         </p>
 
         <p>
-          Think of this website as the longer conversation —
-          somewhere we can slow down, learn something useful,
-          and talk about the things that actually matter.
+          My goal is to create a space that feels useful,
+          relatable, educational, and fun.
         </p>
 
       </div>
 
     </div>
-
   </section>
 
+  <section class="podcast" id="podcast">
 
-  <!-- CONNECT -->
+    <div class="podcast-card">
+
+      <p class="section-label" style="color:#f6c995;">
+        My podcast
+      </p>
+
+      <h2>🎙️ Gen Z in their 20s</h2>
+
+      <p>
+        I started my podcast, Gen Z in their 20s by Lulu Musik,
+        during my undergraduate years. It's a space for conversations
+        about navigating your 20s, personal growth, relationships,
+        mental wellness, culture, and life as part of Gen Z.
+      </p>
+
+      <p>
+        I haven't recorded a new season recently, but it's still
+        part of my story — and maybe it's time for a comeback.
+      </p>
+
+      <a
+        href="https://podcasts.apple.com/au/podcast/gen-z-in-their-20s/id1459283214"
+        target="_blank"
+        class="podcast-button">
+        Listen on Apple Podcasts
+      </a>
+
+    </div>
+
+  </section>
 
   <section>
 
@@ -663,23 +664,31 @@
 
       <div class="connect">
 
-        <h2>
-          Come hang out with me 🍊
-        </h2>
+        <h2>Come hang out with me 🌸</h2>
 
         <p>
-          Follow along for videos, conversations, new posts,
+          Follow Orange Flower for lifestyle content,
+          wellness conversations, Gen Z tips, inspiration,
           and everything I'm learning along the way.
         </p>
 
-        <!-- We'll add your real social links later -->
-
-        <a href="#" class="social-button">
-          TikTok
+        <!-- Replace # with your exact TikTok profile link -->
+        <a href="#" target="_blank" class="social-button">
+          TikTok • Orange Flower
         </a>
 
-        <a href="#" class="social-button">
+        <a
+          href="https://www.instagram.com/stella_onyinye_/"
+          target="_blank"
+          class="social-button">
           Instagram
+        </a>
+
+        <a
+          href="https://www.pinterest.com/stella_onyinye_/"
+          target="_blank"
+          class="social-button">
+          Pinterest
         </a>
 
       </div>
@@ -688,17 +697,40 @@
 
   </section>
 
+  <section>
 
-  <!-- FOOTER -->
+    <div class="disclaimer">
+
+      <h3>Wellness & Educational Disclaimer</h3>
+
+      <p>
+        The content shared on Orange Flower is for general educational,
+        informational, and lifestyle purposes only. It is not intended
+        to diagnose, treat, cure, or prevent any medical condition
+        and should not be considered individualized medical,
+        nutritional, or mental health advice.
+      </p>
+
+      <br>
+
+      <p>
+        My content reflects personal experiences, general education,
+        and topics I am learning about as an MPH student and content creator.
+        Always consult an appropriate qualified healthcare professional
+        regarding your individual health needs or before making significant
+        changes to your diet, medications, or healthcare routine.
+      </p>
+
+    </div>
+
+  </section>
 
   <footer>
-
     <p>
-      © 2026 Orange 🍊
+      © 2026 Orange Flower 🌸🍊
       <br>
-      Made with curiosity, care, and a lot of learning.
+      Lifestyle • Nutrition • Wellness • Gen Z
     </p>
-
   </footer>
 
 </body>
