@@ -250,12 +250,18 @@
       align-items: center;
     }
 
-    ..about-photo {
+   .about-photo {
   width: 100%;
   height: 520px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 65%;
-  border-radius: 30px;
   display: block;
 }
 
@@ -661,11 +667,12 @@
   <section id="about">
     <div class="container about">
 
-      <img
-  src="./orange-flower-about.jpg"
-  alt="Orange Flower creator"
-  class="about-photo"
->
+     <div class="about-photo">
+  <img
+    src="./orange-flower-about.jpg"
+    alt="Orange Flower creator"
+  >
+</div>
 
       <div class="about-text">
 
